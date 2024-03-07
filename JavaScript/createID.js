@@ -1,6 +1,9 @@
 const createForm = document.querySelector("#createForm");
 const createID = document.createElement('input');
 const createPW = document.createElement('input');
+const createInputEmail = document.createElement('input');
+const sendEmailBTN = document.createElement('button');
+const createCheckBirthForm = document.createElement('div');
 const createBtn = document.createElement('button');
 
 function createIDInputID(){
@@ -17,12 +20,26 @@ function createIDInputPW(){
     createPW.required = true;
     createForm.appendChild(createPW);
 }
+function createIDInputEmail(){
+    createInputEmail.id = 'createEmail';
+    createInputEmail.name = 'createEmail';
+    createInputEmail.placeholder = 'Write your e-mail';
+    createInputEmail.required = true;
+    createForm.appendChild(createInputEmail);
+}
+function createEmailBTN(){
+    sendEmailBTN.id = 'sendEmail';
+    sendEmailBTN.innerText = 'Send e-mail';
+    createForm.appendChild(sendEmailBTN);
+}
 function createIDInputBTN(){
     createBtn.id = 'loginBTN';
-    createBtn.innerText = 'LogIn!';
+    createBtn.innerText = 'Create new ID!';
     createForm.appendChild(createBtn);
 }
 
 createIDInputID();
 createIDInputPW();
+createIDInputEmail();
+createEmailBTN();
 createIDInputBTN();

@@ -29,6 +29,7 @@ function createInputBTN(){
 
 function loginClick(click){
     console.log("Clicked!");
+    click.preventDefault();
 }
 
 function createMakeID(){
