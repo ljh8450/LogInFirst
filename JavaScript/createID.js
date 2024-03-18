@@ -3,7 +3,10 @@ const createID = document.createElement('input');
 const createPW = document.createElement('input');
 const createInputEmail = document.createElement('input');
 const sendEmailBTN = document.createElement('button');
-const createCheckBirthForm = document.createElement('div');
+const checkEmailInput = document.createElement('input');
+const emailTime = document.createElement('p');
+const extendTime = document.createElement('button');
+const checkEmailBTN = document.createElement('button');
 const createBtn = document.createElement('button');
 
 function createIDInputID(){
@@ -23,14 +26,33 @@ function createIDInputPW(){
 function createIDInputEmail(){
     createInputEmail.id = 'createEmail';
     createInputEmail.name = 'createEmail';
-    createInputEmail.placeholder = 'Write your e-mail';
+    createInputEmail.placeholder = 'Write your E-Mail';
     createInputEmail.required = true;
     createForm.appendChild(createInputEmail);
 }
 function createEmailBTN(){
     sendEmailBTN.id = 'sendEmail';
-    sendEmailBTN.innerText = 'Send e-mail';
+    sendEmailBTN.innerText = 'Send E-Mail';
     createForm.appendChild(sendEmailBTN);
+}
+function createCheckEmail(){
+    checkEmailInput.id = 'checkEmailInput';
+    checkEmailInput.name = 'checkEmailInput';
+    checkEmailInput.placeholder = 'Input code!(check your E-Mail)';
+    createForm.appendChild(checkEmailInput);
+}
+function createDisplayTime(){
+    emailTime.id = 'emailTime';
+    emailTime.innerText = '00:00';
+    extendTime.id = 'extendTime';
+    extendTime.innerText = 'Extend Time!';
+    createForm.appendChild(emailTime);
+    createForm.appendChild(extendTime);
+}
+function createCheckEmailBTN(){
+    checkEmailBTN.id = 'checkEmailBTN';
+    checkEmailBTN.innerText = 'checkEmailBTN';
+    createForm.appendChild(checkEmailBTN);
 }
 function createIDInputBTN(){
     createBtn.id = 'loginBTN';
@@ -42,4 +64,7 @@ createIDInputID();
 createIDInputPW();
 createIDInputEmail();
 createEmailBTN();
+createCheckEmail();
+createDisplayTime();
+createCheckEmailBTN();
 createIDInputBTN();
