@@ -28,8 +28,8 @@ function createInputBTN(){
 }
 
 function loginClick(click){
-    console.log("Clicked!");
     click.preventDefault();
+    document.location.href = './HTML/home.html';
 }
 
 function createMakeID(){
